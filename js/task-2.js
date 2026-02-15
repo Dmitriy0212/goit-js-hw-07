@@ -28,11 +28,14 @@ let target = document.querySelector(".gallery");
 const newImage = images
   .map(
     (image) =>
-      '<li class="gallery-item"><img src=' +
-      `${image.url}` +
+      /*'<li class="gallery-item"><img src=' +
+      '"'`${image.url}` +
+      '"' +
       " alt=" +
-      `${image.alt}` +
-      "></li>"
+      '"'`${image.alt}` +
+      '"' +
+      "></li>"*/
+      `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}"></li>`
   )
   .join("");
 target.insertAdjacentHTML("beforeend", newImage);
